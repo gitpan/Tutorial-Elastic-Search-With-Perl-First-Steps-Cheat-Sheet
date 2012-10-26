@@ -9,6 +9,11 @@ WriteMakefile(
     AUTHOR       => 'Hernan Lopes (hernanlopes@gmail.com)',
     ABSTRACT     => 'Learn how to start using Elastic Search with perl for your apps',
     PREREQ_PM    => {
-                     'Test::Simple' => 0.44,
+                    'Test::Simple' => 0.44,
+                    'Moose' => 0,
+                    'ElasticSearch' => 0,
+                    'Data::Printer' => 0,
+                    'Try::Tiny' => 0,
+                    'File::Slurp' => 0,
                     },
 );

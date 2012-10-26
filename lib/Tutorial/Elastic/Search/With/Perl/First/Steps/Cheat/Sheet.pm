@@ -2,18 +2,23 @@ package Tutorial::Elastic::Search::With::Perl::First::Steps::Cheat::Sheet;
 use strict;
 use warnings;
 
-our $VERSION     = '0.01';
+our $VERSION     = '0.02';
 
-=pod 
+=pod
 
 =head1 Elastic Search basics for dummys. With perl examples.
 
-    As i began developing using elastic search, i noticed the documentation lacks a nice cookbook. So i came up with the idea to create this document which can serve as a beta cheatsheet and has the intent of passing the basic knowledge to get your elastic search searches going.  
-    Elastic search will give you fast searches .. its like google searching facility for you, and you can scale it! isnt it great ? 
+    As i began developing using elastic search, i noticed the documentation lacks a nice cookbook. So i came up with the idea to create this document which can serve as a beta cheatsheet and has the intent of passing the basic knowledge to get your elastic search searches going.
+    Elastic search will give you fast searches .. its like google searching facility for you, and you can scale it! isnt it great ?
 
     First i will give you the commands without perl. And then (on appendix) you can see the same commands using the perl api.
 
     enjoy this tutorial folks
+
+=head2 More tutorials
+
+Tutorial::Elastic::Search::With::Perl::First::Steps::Cheat::Sheet
+Tutorial::Elastic::Search::With::Perl::First::Steps::Cheat::Sheet::Geo::Point::Distance
 
 =head2 Get ElasticSearch
 
@@ -37,7 +42,7 @@ To test the running server you can analyse the successful response from:
     curl -X GET http://localhost:9200/
 
 If you get any errors, repeat the procedure from the steps before you get outside help.
-    
+
 =head2 Upgrade ElasticSearch
 
     ATTENTION: If you have an index running, and you need to upgrade, read about the upgrading procedure on your versions webpage, which you can find listed here: http://www.elasticsearch.org/download/
@@ -45,15 +50,15 @@ If you get any errors, repeat the procedure from the steps before you get outsid
 
 =head2 Delete an Index
 
-If you need to delete your index, use with care because there is no data restoration: 
+If you need to delete your index, use with care because there is no data restoration:
 
     curl -XDELETE http://localhost:9200/myapp
 
 =head2 Create an Object Mapping
 
-Here we create an object mapping called 'myapp'. 
- 
-    curl -XPUT http://localhost:9200/myapp/ -d '{   
+Here we create an object mapping called 'myapp'.
+
+    curl -XPUT http://localhost:9200/myapp/ -d '{
         "settings": {
             "analysis": {
                 "analyzer": {
@@ -227,7 +232,7 @@ Just pass the id directly on the url.
         }
     }'
 
-=head2 Search by name 
+=head2 Search by name
     # Search: asus
     #curl -XGET 'http://127.0.0.1:9200/myapp/product/_search?pretty=1&q=asus'
     # Search: ãsus
@@ -249,7 +254,7 @@ Just pass the id directly on the url.
                             }
                         }
                      },
-                     { 
+                     {
                          "range" : {
                              "price_high" : {
                                  "lte" : 2500.61
@@ -259,7 +264,7 @@ Just pass the id directly on the url.
                  ]
              }
          }
-    }'                         
+    }'
 
 
 =head2 Search price_low gte 1800.15 AND price_high 2500.61 AND name contains asus. The 'must' is {} (hash)
@@ -290,16 +295,16 @@ Just pass the id directly on the url.
 
 =head2 Elastic Search Visual Interface Plugins
 
-Access the plugins page at: 
-    
+Access the plugins page at:
+
     http://www.elasticsearch.org/guide/appendix/clients.html
 
 Under 'Front Ends' check
-    
+
     elasticsearch-head: A web front end for an elastic search cluster.
 
 Its very easy to instal.. just do as the plugins readme says:
-    
+
     cd my-elasticsearch
     ./bin/plugin -install mobz/elasticsearch-head
 
@@ -333,7 +338,7 @@ Then access the plugin webpage:
                         "tokenizer" => "standard",
                         "filter"    => [
     #                       "standard",     "my_delimiter",
-    #                        "lowercase",    
+    #                        "lowercase",
     #                         "stop",
     #                        "asciifolding", "porter_stem"
                         ]
@@ -341,7 +346,7 @@ Then access the plugin webpage:
                     "search_analyzer" => {
                         "tokenizer" => "standard",
                         "filter"    => [
-    #                       "standard", 
+    #                       "standard",
     #                       "lowercase",
     #                       "stop",     "asciifolding",
     #                       "porter_stem"
@@ -585,7 +590,7 @@ Then access the plugin webpage:
 =head2 AUTHOR
 
     If you liked this article, i am accepting donations at:
-    Hernan Lopes  C<< <hernanlopes____gmail.com> >> 
+    Hernan Lopes  C<< <hernanlopes____gmail.com> >>
 
 =cut
 

@@ -1,15 +1,7 @@
-pod2text Tutorial::Elastic::Search::With::Perl::First::Steps::Cheat::Sheet.pm > README
+Tutorial::Elastic::Search::With::Perl::FirstSteps::Cheat::Sheet
 
-If this is still here it means the programmer was too lazy to create the readme file.
+As you can notice, here you will find some useful, or maybe not so useful how-tos with elastic search.
 
-You can create it now by using the command shown above from this directory.
+I hope you enjoy!
 
-At the very least you should be able to use this set of instructions
-to install the module...
-
-perl Makefile.PL
-make
-make test
-make install
-
-If you are on a windows box you should use 'nmake' rather than 'make'.
+HERNAN

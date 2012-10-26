@@ -1,5 +1,6 @@
 Changes
 lib/Tutorial/Elastic/Search/With/Perl/First/Steps/Cheat/Sheet.pm
+lib/Tutorial/Elastic/Search/With/Perl/First/Steps/Cheat/Sheet/Geo/Point/Distance.pm
 LICENSE
 Makefile.PL
 MANIFEST

@@ -18,5 +18,10 @@ no_index:
     - t
     - inc
 requires:
+  Data::Printer: 0
+  ElasticSearch: 0
+  File::Slurp: 0
+  Moose: 0
   Test::Simple: 0.44
-version: 0.01
+  Try::Tiny: 0
+version: 0.02

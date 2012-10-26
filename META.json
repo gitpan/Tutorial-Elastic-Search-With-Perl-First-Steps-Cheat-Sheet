@@ -32,10 +32,15 @@
       },
       "runtime" : {
          "requires" : {
-            "Test::Simple" : "0.44"
+            "Data::Printer" : "0",
+            "ElasticSearch" : "0",
+            "File::Slurp" : "0",
+            "Moose" : "0",
+            "Test::Simple" : "0.44",
+            "Try::Tiny" : "0"
          }
       }
    },
    "release_status" : "stable",
-   "version" : "0.01"
+   "version" : "0.02"
 }
